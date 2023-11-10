@@ -31,4 +31,5 @@ Modem 重置;AT+CFUN=1
 设置 USB 网络模式为 QMI/PPP/默认;AT+QCFG="usbnet",0
 设置 USB 网络模式为 ECM;AT+QCFG="usbnet",1
 设置 USB 网络模式为 MBIM;AT+QCFG="usbnet",2
+设置 USB 网络模式为 RNDIS;AT+QCFG="usbnet",3
 !更改IMEI,需重启;AT+EGMR=1,7,"868227050701486"
