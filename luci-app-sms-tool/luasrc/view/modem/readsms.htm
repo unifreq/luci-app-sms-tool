@@ -64,7 +64,7 @@ tr:nth-child(odd) {background-color: var(--background-color-medium)}
 
 	window.onload = function readSMS() {
 
-			XHR.get('<%=luci.dispatcher.build_url("admin", "modem", "sms", "readsim")%>', null,
+			XHR.get('<%=luci.dispatcher.build_url("admin", "services", "sms", "readsim")%>', null,
 			function(x, sim)
 			{
 			var vn = parseInt(sim.use) || 0;
@@ -231,7 +231,7 @@ if (document.querySelectorAll('input[name="smsn"]:checked').length === document.
 		for (var i = rowCount - 1; i > 0; i--) {
             		smsTable.deleteRow(i);}
 
-		XHR.get('<%=luci.dispatcher.build_url("admin", "modem", "sms", "delete_all")%>/' , null,
+		XHR.get('<%=luci.dispatcher.build_url("admin", "services", "sms", "delete_all")%>/' , null,
 
 			function()
 			{
@@ -239,7 +239,7 @@ if (document.querySelectorAll('input[name="smsn"]:checked').length === document.
 			}
 		);
 
-		XHR.get('<%=luci.dispatcher.build_url("admin", "modem", "sms", "countsms")%>/' , null,
+		XHR.get('<%=luci.dispatcher.build_url("admin", "services", "sms", "countsms")%>/' , null,
 
 			function()
 			{
@@ -264,7 +264,7 @@ if (document.querySelectorAll('input[name="smsn"]:checked').length === document.
 
 	if (confirm("<%:Delete selected message(s)?%>")) {
 
-		XHR.get('<%=luci.dispatcher.build_url("admin", "modem", "sms", "delete_one")%>/' + smsindex, null,
+		XHR.get('<%=luci.dispatcher.build_url("admin", "services", "sms", "delete_one")%>/' + smsindex, null,
 
 			function()
 			{
@@ -281,7 +281,7 @@ if (document.querySelectorAll('input[name="smsn"]:checked').length === document.
   			}
         		}
 
-		XHR.get('<%=luci.dispatcher.build_url("admin", "modem", "sms", "readsim")%>', null,
+		XHR.get('<%=luci.dispatcher.build_url("admin", "services", "sms", "readsim")%>', null,
 			function(x, sim)
 			{
 			var vn = parseInt(sim.use) || 0;
@@ -295,7 +295,7 @@ if (document.querySelectorAll('input[name="smsn"]:checked').length === document.
 
 		);
 
-		XHR.get('<%=luci.dispatcher.build_url("admin", "modem", "sms", "countsms")%>/' , null,
+		XHR.get('<%=luci.dispatcher.build_url("admin", "services", "sms", "countsms")%>/' , null,
 
 			function()
 			{

@@ -1,6 +1,6 @@
 
 config sms_tool 'general'
-	option pnumber '48'
+	option pnumber '86'
 	option prefix '1'
 	option ledtimeon '1'
 	option ledtimeoff '5'

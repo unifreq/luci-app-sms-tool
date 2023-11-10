@@ -52,7 +52,7 @@ window.onload = function prefiksSMS() {
 
 
 
-XHR.get('<%=luci.dispatcher.build_url("admin", "modem", "sms", "user_phonebook")%>', null,
+XHR.get('<%=luci.dispatcher.build_url("admin", "services", "sms", "user_phonebook")%>', null,
 			function(x, json)
 			{
 				select = document.getElementById('pb');
@@ -123,7 +123,7 @@ function codsp() {
 
 
 function postcmd(cmd) {
-    (new XHR()).post("<%=luci.dispatcher.build_url("admin", "modem", "sms", "run_sms")%>", {"scode":cmd}, function(x) {
+    (new XHR()).post("<%=luci.dispatcher.build_url("admin", "services", "sms", "run_sms")%>", {"scode":cmd}, function(x) {
         console.log(x.response)
         console.log(x)
 	 	var cut = x.response;

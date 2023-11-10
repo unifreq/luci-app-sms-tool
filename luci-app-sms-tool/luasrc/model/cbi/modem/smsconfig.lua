@@ -92,7 +92,7 @@ end
 
 local t = s:taboption(this_tab, Value, "pnumber", translate("Prefix Number"), translate("The phone number should be preceded by the country prefix (for Poland it is 48, without '+'). If the number is 5, 4 or 3 characters, it is treated as 'short' and should not be preceded by a country prefix."))
 t.rmempty = true
-t.default = 48
+t.default = 86
 
 local f = s:taboption(this_tab, Flag, "prefix", translate("Add Prefix to Phone Number"), translate("Automatically add prefix to the phone number field."))
 f.rmempty = false
